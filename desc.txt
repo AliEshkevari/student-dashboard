@@ -1,0 +1,9 @@
+Build a small web app that shows a dashboard for students. It has the following features:
+
+A homepage with welcome text and a navigation bar.
+
+A list of students loaded from a mock API.
+
+A student details page when clicking a student name.
+
+A form to add a new student (name, age, grade).

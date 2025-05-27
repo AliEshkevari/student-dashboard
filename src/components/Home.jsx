@@ -2,7 +2,11 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <main>Home</main>
+    <main>
+      <div className='welcome'>
+        Welcome to your dashboard
+      </div>
+    </main>
   )
 }
 

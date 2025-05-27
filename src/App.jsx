@@ -2,7 +2,7 @@ import './index.css'
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './components/Home';
-import StudentDetails from './components/StudentDetails'
+import StudentDetails from './components/StudentDetails';
 import StudentList from './components/StudentList'
 import AddStudent from './components/AddStudent';
 
@@ -10,15 +10,18 @@ function App() {
   return (
       <Router>
         <nav>
+          <h2>
+            Student Dashboard
+          </h2>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" className='nav-link'>Home</Link>
             </li>
             <li>
-              <Link to="/students">Student List</Link>
+              <Link to="/students" className='nav-link'>Student List</Link>
             </li>
             <li>
-              <Link to="/addStudent">Add student</Link>
+              <Link to="/addStudent" className='nav-link'>Add student</Link>
             </li>
           </ul>
         </nav>
