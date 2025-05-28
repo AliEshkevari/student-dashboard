@@ -5,11 +5,11 @@ const StudentList = () => {
   const [students, setStudents] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:3000/students').then(res => res.json()).then(data => setStudents(data))
+    fetch('https://68371575664e72d28e437a17.mockapi.io/Students').then(res => res.json()).then(data => setStudents(data))
   }, [])
 
   const handleDelete = (id) =>{
-    fetch('http://localhost:3000/students',{
+    fetch('https://68371575664e72d28e437a17.mockapi.io/Students',{
       method: 'DELETE'
     }).then(() =>{
       setStudents(students.filter((student) => student.id != id))

@@ -11,7 +11,7 @@ const AddStudent = () => {
   const handleAdd = (e) => {
     e.preventDefault()
     const newStudent = {name, age, grade}
-    fetch('http://localhost:3000/students', {
+    fetch('https://68371575664e72d28e437a17.mockapi.io/Students', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(newStudent)
@@ -20,7 +20,7 @@ const AddStudent = () => {
 
   return (
     <section>
-      <h2>Add Student Form</h2>
+      <h2 style={{textAlign: 'center', padding: '2rem', fontSize: '2.4rem'}}>Add Student Form</h2>
       <form onSubmit={handleAdd}>
         <label>Student name: </label>
         <input required value={name} onChange={(e) => setName(e.target.value)} />

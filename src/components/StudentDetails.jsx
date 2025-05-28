@@ -6,7 +6,7 @@ const StudentDetails = () => {
   const [student, setStudent] = useState(null)
 
   useEffect(() => {
-    fetch(`http://localhost:3000/students/${id}`).then(res => res.json()).then(data => setStudent(data))
+    fetch(`https://68371575664e72d28e437a17.mockapi.io/Students/${id}`).then(res => res.json()).then(data => setStudent(data))
   }, [id])
 
   if(!student) return <p>Student is loading ...</p>

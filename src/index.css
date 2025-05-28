@@ -75,3 +75,24 @@ nav ul li{
     font-size: 2rem;
     padding: 3rem 0;
 }
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+form label{
+    font-size: 1.8rem;
+}
+
+form input{
+    padding: 1.2rem;
+}
+
+form button{
+    padding: 1.6rem;
+}
