@@ -1,8 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const AddStudent = () => {
+  const [name, setName] = useState('')
+  const [age, setAge] = useState('')
+  const [grade, setGrade] = useState('')
+
+  let navigate = useNavigate()
+
+  const handleAdd = (e) => {
+    e.preventDefault()
+    const newStudent = {name, age, grade}
+    fetch('http://localhost:3000/students', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(newStudent)
+    }).then(() => navigate('/students'))
+  }
+
   return (
-    <main>Add student</main>
+    <section>
+      <h2>Add Student Form</h2>
+      <form onSubmit={handleAdd}>
+        <label>Student name: </label>
+        <input required value={name} onChange={(e) => setName(e.target.value)} />
+        <br />
+        <label>Student age: </label>
+        <input required value={age} onChange={(e) => setAge(e.target.value)} />
+        <br />
+        <label>Student grade: </label>
+        <input required value={grade} onChange={(e) => setGrade(e.target.value)} />
+        <br />
+        <button type='submit'>Add</button>
+      </form>
+    </section>
   )
 }
 
